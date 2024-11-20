@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:400px;
+            height: 250px;
+            padding: 20px;
+            border: 20px solid rgba(204, 204, 204, 0.5);
+        margin-bottom: 20px;
+        overflow: auto;
+        background-size: contain;
+        background-image: url(images/coffe.jpg);
+        background-repeat: no-repeat;
+        background-position: right top;
+        }
+        #bg1{
+            background-origin: padding-box;
+        }
+        #bg2{
+            background-origin: border-box;
+        }
+        #bg3{
+            background-origin: content-box;
+        }
+        body{
+            background-image: url(images/cup.jpg.avif);
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-attachment:fixed ;
+        }
+        body{
+            /* image/ repeat / position / attachment 순서! */
+            background: url(images/sea.jpg) no-repeat center bottom fixed;
+        }
+    </style>
+</head>
+<body>
+    <div id="bg1">
+        <h2>첫번째 제목</h2>
+        <h3>두번째 제목</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi dolor
+            ibus vero, laudantium repellendus deserunt p
+            ossimus adipisci, eveniet, neque quis sequi minima debit
+            is dolorem quia iure atque eum cupiditate! Nobis, facilis?</p>
+    </div>
+    <div id="bg2">
+        <h2>2첫번째 제목</h2>
+        <h3>2두번째 제목</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi dolor
+            ibus vero, laudantium repellendus deserunt p
+            ossimus adipisci, eveniet, neque quis sequi minima debit
+            is dolorem quia iure atque eum cupiditate! Nobis, facilis?</p>
+    </div>
+    <div id="bg3">
+        <h2>3첫번째 제목</h2>
+        <h3>3두번째 제목</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi dolor
+            ibus vero, laudantium repellendus deserunt p
+            ossimus adipisci, eveniet, neque quis sequi minima debit
+            is dolorem quia iure atque eum cupiditate! Nobis, facilis?</p>
+    </div>
+</body>
+</html>

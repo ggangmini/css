@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그라데이션 실습</title>
+    <!-- 자동 서식 조절 : alt + shift + f -->
+    <Style>
+        .grad {
+            width: 300px;
+            height: 300px;
+            /* 방향을 직접 지정해서 선형 그라데이션 넣는 방법 */
+            background: linear-gradient(to bottom, blue, white);
+            /* to bottom 바텀 반대쪽에서 파란색부터 하얀색까지 */
+        }
+
+        #direction {
+            /* 색이 변하는 방향을 직접(t,r,b,l)지정 */
+            background: linear-gradient(to bottom, blue, white);
+        }
+        #degree{
+            /* 색이 변하는 방향을 각도로 지정 */
+            background: linear-gradient(180deg,red,white);
+        }
+        #color{
+            /* 중간에서 색을 변경하는 방법 (색상 중지점 지정) */
+            background: linear-gradient(to bottom, blue,white 30%,blue);
+        }
+        #radi1{
+            /* 맨 앞에 circle 적으면 동그랗게 / 안적으면 타원형 */
+            background: radial-gradient(circle,white,yellow,red);
+        }
+        #radi2{
+            background: radial-gradient(circle closest-side at 30% 40%,white,yellow,green);
+        }
+        #radi3{
+            background: radial-gradient(yellow,white 10%,orange 60%);
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="grad" id="direction"></div>
+    <div class="grad" id="degree"></div>
+    <div class="grad" id="color"></div>
+    <div class="grad" id="radi1"></div>
+    <div class="grad" id="radi2"></div>
+    <div class="grad" id="radi3"></div>
+</body>
+
+</html>

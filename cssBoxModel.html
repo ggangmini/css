@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .accent {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* box model width height 지정 */
+        div {
+            border: 1px solid #000;
+            margin-bottom: 20px;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 10px solid #ccc;
+        }
+
+        .box2 {
+            box-sizing: border-box;
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 10px solid #00f;
+        }
+
+        button {
+            font-size: 2em;
+            background-color: #fff;
+            padding: 15px 30px;
+            margin: 15px;
+            border: 1px solid #222;
+            box-shadow: 2px 2px 20px #000;
+        }
+
+        .border_width {
+            width: 100px;
+            height: 100px;
+            border-width: 10px 5px 1px;
+            border-top-color: red;
+            border-right-color: blue;
+            border-bottom-color: pink;
+            border-left-color: aqua;
+            border-right-width: 10px;
+            border-bottom-width: 15px;
+            border-right-style: dotted;
+            border-left-style: double;
+            border: 1px solod black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <h4>Block box level</h4>
+    <!-- block box : hn / div / p -->
+    <!-- inline box : span -->
+    <div>내일 죽을 것 처럼<p class="accent">오늘</p>을 살고</div>
+    <p>영원히 살 것처럼<br>내일을 꿈꾸어라.</p>
+    <div>내일 죽을 것처럼 <span class="accent">오늘</span>을 살고</div>
+    <p>영원히 살 것처럼<br>내일을 꿈꾸어라.</p>
+    <hr>
+    <h2>Box model width</h2>
+    <div class="box1">
+    </div>
+    <div class="box2">
+    </div>
+    <hr>
+    <h1>box shadow속성</h1>
+    <button>do it!</button>
+    <hr>
+    <h1>border style 속성</h1>
+    <div style="border: 1px solid #000;"></div>
+    <hr style="border-style: solid;">
+    <hr stlye="border-styled: dotted">
+    <hr style="border-style: dashed;">
+    <hr stlye="border-styled: double;
+     border-width10px" ;>
+    <hr style="border-style: groove;
+     border-width: 10px" ;>
+    <hr>
+    <h3>border width 속성</h3>
+    <div class="border_width"></div>
+</body>
+
+</html>

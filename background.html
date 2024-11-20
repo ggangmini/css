@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background 교재 실습</title>
+<style>
+    #background-color{
+        background-color: red;
+        margin-top:50px;
+        font-size: 80px;
+        text-align: center;
+    }
+    .clipdiv{
+        border:5px dotted black;
+        background-color: pink;
+        width: 350px;
+        padding: 20px;
+        margin-right:20px ;
+        /* float: left; */
+        /*padding 테두리 안쪽*/
+    }
+    #clip-border{
+        background-clip: border-box;
+    }
+    #clip-padding{
+        background-clip: padding-box;
+    }
+    #clip-content{
+        background-clip: content-box;
+    }
+    .divsize{
+        width: 100%;
+        height: 500px;
+    }
+    #background-image{
+        background-image:url(images/cup.jpg.avif);
+        background-repeat : no-repeat;
+    }
+    ul{
+        list-style: none;
+        margin-left: -30px;
+    }
+    .listbg{
+        padding-left: 50px;
+        line-height:40px;
+        background-image: url(images/dot.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+</style>
+</head>
+<body>
+    <h3>background-color 속성</h3>
+    <h1 id="background-color">do it</H1>
+        <hr>
+        <h3>background-clip</h3>
+        <div id="clip-border" class="clipdiv">
+        <p>Lorem ipsum dolor sit amet consec
+            tetur adipisicing elit. Obcaecati delectus repel
+            lendus nesciunt facilis, officiis sapiente blanditiis q
+            uam. Quo assumenda totam, aspernatur beatae vero aliquam 
+            optio facilis distinctio quos ullam exercitationem?</p>
+        </div>
+        <div id="clip-padding" class="clipdiv">
+            <p>Lorem ipsum dolor sit amet consec
+                tetur adipisicing elit. Obcaecati delectus repel
+                lendus nesciunt facilis, officiis sapiente blanditiis q
+                uam. Quo assumenda totam, aspernatur beatae vero aliquam 
+                optio facilis distinctio quos ullam exercitationem?</p>
+            </div>
+            <div id="clip-content" class="clipdiv">
+                <p>Lorem ipsum dolor sit amet consec
+                    tetur adipisicing elit. Obcaecati delectus repel
+                    lendus nesciunt facilis, officiis sapiente blanditiis q
+                    uam. Quo assumenda totam, aspernatur beatae vero aliquam 
+                    optio facilis distinctio quos ullam exercitationem?</p>
+                </div>
+
+                <hr>
+                <h3>background-image 속성</h3>
+                <div id="background-image" class="divsize"></div>
+    <hr>
+    <h3>background-position 속성</h3>  <!--background-position = <수평위치><수직위치>
+     --><!-- 수평위치 =left/center/right/백분율/길이값-->
+        <!--수직위치 = top/center/bottom/백분율/길이값-->
+        <ul>
+            <li class="listbg">회사소개</li>
+            <li class="listbg">도서</li>
+            <li class="listbg">자료실</li>
+            <li class="listbg">강의</li>
+        
+            
+        </ul>
+</body>
+</html>
