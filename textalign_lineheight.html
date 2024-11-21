@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textalign_lineheight</title>
+    <style>
+        .center {
+        text-align: center;
+        }
+        .justify{
+            text-align: justify;
+        }
+        .small{
+            line-height: 0.7;
+        }
+        .big{
+            line-height: 2.5;
+        }
+        .heading{
+            width:100%;
+            height : 100px;
+            background: #222;
+            color:rgb(255,255,255);
+            text-align: center;
+            /* line-height: 100px; */}
+            .shadow1{
+                color:red;
+                /* text-shadow : <가로거리> <세로거리> <번짐정도> <그림자색깔>
+                가로거리란 ? 글자기준 오른쪽으로
+                세로거리란 ? 글자기준 아래쪽으로
+                 */
+                text-shadow: 5px 5px 3px black;
+            }
+            .shadow2{
+                text-shadow: 5px 5px 3px #ffa500;
+            }
+            .shadow3{
+                color:#fff;
+                text-shadow: 7px -7px 20px #000;
+                /* 오른쪽으로 7px 위쪽으로 7px (-가붙으면 반대방향) */
+            }
+            /* 표와 셀에 테두리 그리기 */
+            table{
+                caption-side: bottom;
+                border : 1px solid black;
+                border-collapse: collapse;
+                td,th {
+                    border : 1px dotted black;
+                    padding : 10px;
+                    text-align: center;
+                }
+            }
+        
+    </style>
+</head>
+<body>
+    <p>껍질에 붉은 빛이 돌아 레드향이라 불린다. 레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고,과육이 붉고 통통하다.가나나나나나나나나나나나나나난ㄴ나ㅏㄴ나나ㅏ</p>
+    <p class="justify small">껍질에 붉은 빛이 돌아 레드향이라 불린다. 레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고,과육이 붉고 통통하다.가나나나나나나나나나나나나나난ㄴ나ㅏㄴ나나ㅏ</p>
+    <p class="center big">껍질에 붉은 빛이 돌아 레드향이라 불린다. 레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고,과육이 붉고 통통하다.가나나나나나나나나나나나나나난ㄴ나ㅏㄴ나나ㅏ나나나나나</p>
+    <hr>
+    <h1 class="heading">HTML</h1>
+    <hr>
+    <h1> text-decoration 속성</h1>
+    <p style="text-decoration: none;">none</p>
+    <p style="text-decoration: underline;">under-line</p>
+    <p style="text-decoration: overline;">over-line</p>
+    <p style="text-decoration: line-through;">line-through</p>
+    <a href="#" style="text-decoration: overline"; >가나다라
+     </a>
+    <hr>
+    <h1>text shadow 속성</h1>
+    <h1 class="shadow1">HTML</h1>
+    <h1 class="shadow2">CSS</h1>
+    <h1 class="shadow3">자바스크립트</h1>
+    <hr>
+    <h1>text-trnasform 특성</h1>
+<p style="text-transform: capitalize;">hTmL</p>
+<p style="text-transform: uppercase;">CSS abcd</p>
+<p style="text-transform: lowercase;"> JAVASCRIPT </p>
+<P style="text-transform: full-width; text-decoration: line-through;">abcdef</P>
+<hr>
+<!-- letter-spacing(글자간 간격) word-spacing(단어간 간격) -->
+<h1>letter-spacing / word-sapcing</h1>
+<p style="letter-spacing: 0.2em;">CSS</p>
+<p style="letter-spacing: 0.5em;">CSS</p>
+<p style="word-spacing: 0.5em;">CSS</p>
+<p style="letter-spacing: 0.5em; 
+word-spacing: 1.5em;">
+CSS CSS
+</p>
+<hr>
+<h1>list style type 속성</h1>
+<ul style="list-style-type: disc;">
+<li>가나다라</li>
+<li>마바사아</li>
+</ul>
+<ol style="list-style-type: upper-alpha;" >
+    <li>abcdefg</li>
+    <li>hijklmn</li>
+    <li>opqrstu</li>
+</ol>
+<ul style="list-style-image: url(images/dot.png);">
+<li>가가가가가가</li>
+<li>나나나나나나</li>
+<li>다다다다다다</li>
+</ul>
+<ul style="list-style-position: inside;">
+    <li>리스트 테스트1</li>
+    <li>리스트 테스트2</li>
+    <li>리스트 테스트3</li>
+</ul>
+<ul>
+    <li>리스트 테스트1</li>
+    <li>리스트 테스트2</li>
+    <li>리스트 테스트3</li>
+</ul>
+<ul style="list-style-position: outside;">
+    <li>리스트 테스트1</li>
+    <li>리스트 테스트2</li>
+    <li>리스트 테스트3</li>
+</ul>
+<ul style="list-style: url(images/dot.png) inside">
+    <li>리스트 테스트1</li>
+    <li>리스트 테스트2</li>
+    <li>리스트 테스트3</li>
+</ul>
+    
+<hr>
+<h1>테이블 스타일 속성 실습</h1>
+<table>
+    <caption>선물용과 가정용 상품 구성</caption>
+<thead>
+    <tr>
+        <th>용도</th>
+        <th>중량</th> 
+        <th>개수</th>
+        <th>가격</th>
+        <!-- <th> 테이블헤더 <td>테이블데이터 <tr>table row (테이블행)-->
+    </tr>
+</thead>
+<tbody>
+    <tr>
+    <td rowspan="2">선물용</td>
+    <td>3kg</td>
+    <td>11~16과</td>
+    <td>35000원</td>
+</tr>
+<tr>
+   
+    <td>5kg</td>
+    <td>18~26과</td>
+    <td>52000원</td>
+</tr>
+<tr>
+    <td rowspan="2">가정용</td>
+    <td>3kg</td>
+    <td>11~16과</td>
+    <td>30000원</td>
+</tr>
+<tr>
+    
+    <td>5kg</td>
+    <td>18~26과</td>
+    <td>47000원</td>
+</tr>
+</tbody>
+</table>
+<br><br>
+<div>내일 죽을 것처럼</div>
+</body>
+</html>

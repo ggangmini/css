@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 쿼리 실습</title>
+    <style>
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* view-por height = hv 내가보는 뷰포트의 높이 */
+}
+h1{
+    font-size: 4rem; /* html 태그의 글시 크기 기준*/
+}
+body{
+    background: url(images/sea.jpg) no-repeat fixed;
+    /* 배경화면에 그림을 넣고 반복하지않으며 고정시킴 */
+    background-size: cover;
+}
+/* 화면 크기가 768px 보다 크고 1023px보다 작을 때 */
+@media screen and (min-width : 768px) and (max-width : 1023px){
+    body{
+        background: url(images/coffe.jpg) no-repeat fixed;
+        background-size: cover;
+        color: white;
+    }
+}
+/* 화면의 크기가 0px ~ 767px보다 작을 때 */
+@media screen and (max-width : 767px){
+    body{
+        background: url(images/cup.jpg.avif) no-repeat fixed;
+        background-size: cover;
+        color: red;
+    }
+}
+    </style>
+</head>
+<body>
+    <h1>미디어 쿼리</h1>
+</body>
+</html>

@@ -1,0 +1,63 @@
+/* 파일명 mediacard.cc */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: navy;
+}
+
+#container{
+    width: 320px;
+    margin: 50px auto;
+}
+
+.card{
+position: relative;
+width: 300px;
+height: 500px;
+margin: 20px 10px;
+border: 1px solid lightgray;
+background-color: white;
+}
+
+.card>img{
+    width: 100%;
+}
+
+.words{
+    position: absolute;
+    left: 10px;
+    top: 300px;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (min-width : 768px) and 
+(max-width : 1439px){
+    #container{
+        width: 570px;
+        margin: 50px auto;
+    }
+    .card{
+        position: relative;
+        width: 550px;
+        height: 250px;
+        margin: 20ox 10px;
+        border: 1px solid lightgray;
+        background-color: white;
+    }
+    .words{
+        position: absolute;
+        left: 30px;
+        top: 50px;
+        text-align: center;
+        width: 200px;
+    }
+    .card>img{
+        width: 50%;
+        height: 100%;
+    }
+}
