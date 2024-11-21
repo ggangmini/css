@@ -1,0 +1,152 @@
+<!-- 파일명 : flex1.html -->
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 700px;
+            display: flex; /* div를 flex container 로 지정 */
+            border: 1px solid black;
+            margin-bottom: 30px;
+        }
+
+        .box{
+            padding: 5px 45px;
+            margin: 5px;
+            width: 80px;
+            height: 60px;
+        }
+        .box:nth-child(odd){ /* odd = 홀수 */
+            background-color: pink;
+        }
+        .box:nth-child(even){  /* even = 짝수 */
+            background-color: green;
+        }
+        p{
+            text-align: center;
+            font-weight: bold;
+        }
+        #opt1{flex-direction: row ;} /* 주축을 가로축으로 진행 */
+        #opt2{flex-direction: row-reverse;} /*주축을 가로축으로하는데 오른쪽에서 왼쪽으로 배치*/
+        #opt3{flex-direction: column;} /* 주축을 세로로 지정 위에서 아래로 배치*/
+        #opt4{flex-direction: column-reverse;} /* 주축을 세로로 지정 아래에서 위로배치*/
+
+        #wrap{flex-wrap: row wrap;}
+        #nowrap{flex-wrap : nowrap;}
+        #reverse{flex-wrap : wrap-reverse;}
+        
+        .wide{width: 100%;}
+        #flexstart{justify-content: flex-start;} 
+        #flexend{justify-content: flex-end;}
+        #center{justify-content: center;}
+        #spacearound{justify-content: space-around;}
+        #spacebetween{justify-content: space-between;}
+        #spaceevenly{justify-content: space-evenly;}
+
+        #left1{margin-right:auto ;}
+        #right3{margin-left: auto;}
+    </style>
+ </head>
+ <body>
+    <!-- <h3>1. flex-direction 알아보기</h3>
+    <div class="container" id="opt1">
+        <div class="box"><p1>1</p1></div>
+        <div class="box"><p1>2</p1></div>
+        <div class="box"><p1>3</p1></div>
+    </div>
+    <div class="container" id="opt2">
+        <div class="box"><p1>1</p1></div>
+        <div class="box"><p1>2</p1></div>
+        <div class="box"><p1>3</p1></div>
+    </div>
+    
+    <div class="container" id="opt3">
+        <div class="box"><p1>1</p1></div>
+        <div class="box"><p1>2</p1></div>
+        <div class="box"><p1>3</p1></div>
+    </div>
+    
+    <div class="container" id="opt4">
+        <div class="box"><p1>1</p1></div>
+        <div class="box"><p1>2</p1></div>
+        <div class="box"><p1>3</p1></div>
+    </div>
+    <hr>
+    <h3>2. flex-wrap 알아보기</h3>
+    <div class="container" id="wrap">
+        <div class="box"><p1>1</p1></div>
+        <div class="box"><p1>2</p1></div>
+        <div class="box"><p1>3</p1></div>
+        <div class="box"><p1>4</p1></div>
+        <div class="box"><p1>5</p1></div>
+        <div class="box"><p1>6</p1></div>
+    </div>
+    <div class="container" id="nowrap">
+        <div class="box"><p1>1</p1></div>
+        <div class="box"><p1>2</p1></div>
+        <div class="box"><p1>3</p1></div>
+        <div class="box"><p1>4</p1></div>
+        <div class="box"><p1>5</p1></div>
+        <div class="box"><p1>6</p1></div>
+    </div>
+    <div class="container" id="reverse">
+        <div class="box"><p1>1</p1></div>
+        <div class="box"><p1>2</p1></div>
+        <div class="box"><p1>3</p1></div>
+        <div class="box"><p1>4</p1></div>
+        <div class="box"><p1>5</p1></div>
+        <div class="box"><p1>6</p1></div>
+    </div>
+    <h3>3.justify-content 주축 정렬 방법</h3>
+    <div class="container wide" id="flexstart"> 
+        <div class="box"><p1>1</p1></div>
+        <div class="box"><p1>2</p1></div>
+        <div class="box"><p1>3</p1></div>
+        <div class="box"><p1>4</p1></div>
+    </div>
+    <div class="container wide" id="flexend">
+        <div class="box"><p1>1</p1></div>
+        <div class="box"><p1>2</p1></div>
+        <div class="box"><p1>3</p1></div>
+        <div class="box"><p1>4</p1></div>
+    </div>
+    <div class="container wide" id="center">
+        <div class="box"><p1>1</p1></div>
+        <div class="box"><p1>2</p1></div>
+        <div class="box"><p1>3</p1></div>
+        <div class="box"><p1>4</p1></div>
+    </div>
+    <div class="container wide" id="spacebetween">  첫번째와 마지막을 양옆에두고 나머지를 그안에 넣는것 !-->
+        <div class="box"><p1>1</p1></div>
+        <div class="box"><p1>2</p1></div>
+        <div class="box"><p1>3</p1></div>
+        <div class="box"><p1>4</p1></div>
+    </div>
+    <div class="container wide" id="spacearound"> <!--내 요소 양옆의 빈공간을 포함해서 나열하는것 !-->
+        <div class="box"><p1>1</p1></div>
+        <div class="box"><p1>2</p1></div>
+        <div class="box"><p1>3</p1></div>
+        <div class="box"><p1>4</p1></div>
+    </div>
+    <div class="container wide" id="spaceevenly"><!-- 빈공간이 다 같도록 만드는 것 !-->
+        <div class="box"><p1>1</p1></div>
+        <div class="box"><p1>2</p1></div>
+        <div class="box"><p1>3</p1></div>
+        <div class="box"><p1>4</p1></div>
+    </div> 
+    <h3>4.justify-content 와  margin 을 이용하여 배치</h3>
+    <div class="container wide" id="flex-end">
+        <div class="box" id="left1"></div>
+        <div class="box" id="left2"></div>
+        <div class="box" id="left3"></div>
+    </div>
+    <div class="container wide" id="flex-end">
+        <div class="box" id="right1"></div>
+        <div class="box" id="right2"></div>
+        <div class="box" id="right3"></div>
+    </div>
+ </body>
+ </html>
