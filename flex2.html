@@ -13,11 +13,13 @@
 body{
     background: url(images/coffe.jpg) no-repeat fixed ;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex;    /*justify-content 와 align-items : center 는 display가 flex일때만 사용가능 */
+    align-items:center; /*교차측(수직방향)에 중앙에 위치*/
+    justify-content: center; /* 주축(수평방향)에 중앙에 위치*/
+    /* 교차축 주축을 중앙에 위치하게 하면 정중앙에 위치하게된다 */
     min-height: 100vh;
 }
+
 button{
     background-color: navy;
     color: white;
