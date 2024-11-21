@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container{
+    width: 800px;
+    display: flex;
+    border: 1px solid black;
+    gap: 30px;
+}
+p{
+    color: white;
+    text-align: center;
+    font-size: 2em; /*Chrome 브라우저 기준 기본 글자 크기16px이므로 2rem = 32px */
+}
+.box{
+    background-color: black;
+    flex-basis: 150px;
+}
+.wide{ width: 100%;}
+#grow1{ flex-grow: 1;}
+#grow2{ flex-grow: 1;}
+#grow3{ flex-grow: 0;}  /*default 값*/
+#grow4{ flex-grow: 2;}
+ /* flex-grow 값이 높을수록 남는공간에서 플렉스항목이 가져가는 너비가 많아진다*/
+ 
+.big{
+    background-color: black;
+    width: 300px;
+}
+
+#shrink1{flex-shrink: 1;} /*default 값*/
+#shrink2{flex-shrink: 0;}
+#shrink3{flex-shrink: 1;} /*default 값*/
+#shrink4{flex-shrink: 2;}
+/* flex-shrink 값이 커질수록 플렉스 항목의 줄어드는게 더 많이 줄어진다.*/
+    </style>
+</head>
+<body> <!-- 클래스 이름은 바꿔도 상관없음-->
+    <h3>1. flex-basis 플렉스 항목 기본 크기 설정</h3>
+    <div class="container">
+        <div class="box"><p>가나다라</p></div>
+        <div class="box"><p>가나다라마바사</p></div>
+        <div class="box"><p>ABCDEF</p></div>
+    </div>
+    <h3>2. flex-grow 남은 공간 플렉스 항목에 배분</h3>
+    <div class="container wide">
+        <div class="box" id="grow1"><p>1</p></div>
+        <div class="box" id="grow2"><p>2</p></div>
+        <div class="box" id="grow3"><p>3</p></div>
+        <div class="box" id="grow4"><p>4</p></div>
+    </div>
+
+    <h3> flex-shrink 컨테이너보다 항목의 크기가 클 때, 항목을 축소시키는 비율</h3>
+    <div class="container">
+        <div class="big" id="shrink1"><p>1</p></div>
+        <div class="big" id="shrink2"><p>2</p></div>
+        <div class="big" id="shrink3"><p>3</p></div>
+        <div class="big" id="shrink4"><p>4</p></div>
+    </div>
+</body>
+</html>
