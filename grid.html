@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/grid.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>1.기본 형식으로 grid 만들기</h2>
+    <div id="grid1" class="grid">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+    </div>
+    <h2>2. grid row 높이를 똑같이 만들기</h2>
+    <div id="grid2" class="grid">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+    </div>
+    <h2>3. grid 높이를 자동으로 (minmax이용)</h2>
+    <div id="grid3" class="grid">
+        <div class="items">Lorem ipsum, dolor sit amet consect
+            etur adipisicing eli
+            t. Magni temporibus nulla adipisci numquam voluptatu
+            m, recusandae harum nesciunt eaque dolor
+            e provident quidem blanditiis voluptatibus ea
+            rum aliquid quasi molestiae commodi facilis ipsa?</div>
+        <div class="items">Lorem ipsum, dolor sit amet consect
+            eturus ea
+            rum aliquid quasi molestiae commodi facilis ipsa?</div>
+        <div class="items">Lorem ipsum, dolor sit amet consect
+            eturquam voluptatu
+            m, recusandae harum nesciunt eaque dolor
+            e provident quidem blanditiis voluptatibus ea
+            rum aliquid quasi molestiae commodi facilis ipsa?</div>
+        <div class="items">Lorem ipsum, dolor sit amet consect
+            etur adipisicing eli
+            t. Magni temporibus nulla adipisci numquam voluptatu
+            m, recusandae harum nesciunt eaque dolor
+            e provident quidem blanditiis voluptatibus ea
+            rum aliquid qu?</div>
+        <div class="items">Lorem ipsum, dolor sit amet consect
+            etur adipisicing eli
+            t. Magni temporibus nulla adipisci numquam voluptatu
+            m, recusandae harum nesciunt eaque dolorprovident quidem blanditiis voluptatibus ea
+            rum aliquid quasi molestiae commodi facilis ipsa?</div>
+        <div class="items">Lorem ipsum, dolor sit amet consect
+            etur adipisicing eli
+            t. Magni temporibus nulla adipisci numquam voluptatu
+            m, recusandae harum nesciunt eaque dolorprovident quidem blanditiis voluptatibus ea
+            rum aliquid quasi molestiae commodi facilis ipsa?</div>
+
+    </div>
+
+
+    <h2>4.auto-fit 과 aauto-fill</h2>
+    <h3>auto_fill 일때</h3>
+    <div class="grid" id="auto_fill">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+    </div>
+    <h3>auto_fit 일때</h3>
+    <div class="grid" id="auto_fit">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+    </div>
+    <h2>5.그리드 항목 사이 간격</h2>
+    <div class="grid" id="gap">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+    </div>
+    <h2>6.grid 라인을 사용해 배치</h2>
+    <div class="grid" id="useline">
+        <div class="items" id="box1">box1</div>
+        <div class="items" id="box2">box2</div>
+        <div class="items" id="box3">box3</div>
+        <div class="items" id="box4">box4</div>
+        <div class="items" id="box5">box5</div>
+    </div>
+    <H2>템플릿 영역을 사용해 배치하기</H2>
+    <div id="usetemplate" class="grid">
+        <div id="item1" class="items">item1</div>
+        <div id="item2" class="items">item2</div>
+        <div id="item3" class="items">item3</div>
+        <div id="item4" class="items">item4</div>
+        <div id="item5" class="items">item5</div>
+    </div>
+</body>
+
+</html>
