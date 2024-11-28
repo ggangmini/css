@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 800px;
+            height: 200px;
+            margin: 20px auto;
+        }
+        .origin{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            float: left;
+            margin: 40px;
+        }
+        .origin > div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: all 1s; /*부드럽게 움직이게 하려면*/
+        }
+
+        #movex:hover{
+            transform: translateX(50px);
+        }
+        #movey:hover{
+            transform: translatey(50px);
+        }
+        #movexy:hover{
+            transform: translate(50px, 50px);
+        }
+        #movez:hover{
+            transform: translateZ(-50px);
+        }
+        #movexyz:hover{
+            transform: translate3d(50px,50px,50px);
+        }
+        #scalex:hover{
+            transform: scaleX(2);
+        }
+        #scaley:hover{
+            transform: scaleY(2);
+        }
+        #scalexy:hover{
+            transform: scale(0.5);
+        }
+        #rotate:hover{ /*양수는 시계방향 음수는 반시계방향*/
+            transform: rotate(45deg);
+        }
+        .rotatex:hover{
+            transform: rotateX(50deg);
+        }
+        #pers{
+            perspective: 300px;
+        }
+        .rotatey:hover{
+            transform: rotatey(55deg);
+        }
+        .rotatez:hover{
+            transform: rotatez(55deg);
+        }
+        .rotatexyz:hover{
+            transform: rotate3d(2.5,1.2,-1.5,55deg);
+        }
+        .skewx:hover{ 
+            transform: skewX(30deg);
+        }
+        .skewy:hover{
+            transform: skewY(30deg);
+        }
+        .skewxy:hover{
+            transform: skew(30deg,30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="origin">
+            <div id="movex">movex</div>
+        </div>
+        <div class="origin">
+            <div id="movey">movey</div>
+        </div>
+        <div class="origin">
+            <div id="movexy">movexy</div>
+        </div>
+        <div class="origin">
+            <div id="movez">movez</div>
+        </div>
+        <div class="origin">
+            <div id="movexyz">movexyz</div>
+        </div>
+        <div class="origin">
+            <div id="scalex">scalex</div>
+        </div>
+        <div class="origin">
+            <div id="scaley">scaley</div>
+        </div>
+        <div class="origin">
+            <div id="scalexy">scalexy</div>
+        </div>
+        <div class="origin">
+            <div id="rotate">rotate</div>
+        </div>
+        <div class="origin">
+            <div class="rotatex">rotatex</div>
+        </div>
+        <div class="origin" id="pers">
+            <div class="rotatex">x</div>
+        </div>
+        <div class="origin" id="pers">
+            <div class="rotatey">y</div>
+        </div>
+        <div class="origin" id="pers">
+            <div class="rotatez">z</div>
+        </div>
+        <div class="origin" id="pers">
+            <div class="rotatexyz">xyz</div>
+        </div>
+        <div class="origin">
+            <div class="skewx">skewx</div>
+        </div>
+        <div class="origin">
+            <div class="skewy">skewy</div>
+        </div>
+        <div class="origin">
+            <div class="skewxy">skewxy</div>
+        </div>
+       
+       
+       
+       
+
+
+    </div>
+    
+</body>
+</html>

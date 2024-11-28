@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 20px;
+        }
+
+        .container{
+            width: 200px;
+            padding: 20px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            text-align: center;
+        }
+  /*  container 의 하위 요소중 첫 번째 p 태그 */
+        /* .container p:first-child{
+            background-color: yellow;
+        } */
+/*  container 의 하위 요소중 마지막 태그 */
+        /* .container :last-child{
+            background-color: pink;
+        } */
+   /* container 의 하위 태그 중 div 가 하나만 있으면 */
+        /* .container div:only-child{
+            background-color: lightgreen;
+        } */
+        /* -------nth-child 실습----------- */
+        .container2 {
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5px;
+           
+        }
+        .item{
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        /* 3번째 자식 요소 선택
+        .container2 :nth-child(3){
+            background-color: orange;
+        }
+        /* 짝수 번째 요소 선택 */
+        /* .container2 :nth-child(even){
+            background-color: pink;
+        } */
+        /* 홀수 번째 요소 선택 */
+        /* .container2 :nth-child(odd){
+            background-color: olive;
+        } */ 
+        /* 3의 배수 요소 선택 */
+        /* .container2 :nth-child(3n){
+            background-color: aqua;
+        } */
+         /* 4번째 자식요소 부터 선택 */
+         /* .container2 :nth-child(n+4){
+            background-color: blueviolet;
+         } */
+          /* 4번째 자식요소 까지 선택 */
+          /* .container2 :nth-child(-n+4){
+            background-color: orange;
+          } */
+           /* 3번째부터 5번째까지 선택 */
+           .container2 :nth-child(n+3):nth-child(-n+5){
+            background-color: orange;
+           }
+           /* :nth-child 정리 
+           짝수 / 홀수 / =  even / odd 
+           숫자 배수 = 숫자n / ex) 2배 = 2n / 3배 = 3n
+           숫자까지 = -n + 숫자
+           숫자부터 = n + 숫자
+           숫자부터 숫자까지 = :nth-child(n+숫자):nth-child(-n+숫자)*/
+
+           /*  ---------------:nth-of-type()실습-------------------- */
+.container p:nth-of-type(2){
+    background-color: orange;
+}
+.container div:nth-of-type(2){
+    background-color: yellow;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>첫 번째</p>
+        <div>두 번째</div>
+        <p>세 번째</p>
+        <div>네 번째</div>
+    </div>
+    <div class="container">
+        <div>혼자 ~</div>
+    </div>
+    <hr>
+    <div class="container2">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+    
+</body>
+</html>

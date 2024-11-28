@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYLE>
+        :root{
+            --main--bg-color : pink;
+        }
+        body{
+            background-color: var(--main--bg-color);
+        }
+        #p1::first-letter{
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--main--bg-color);
+        }
+
+
+    #p2::first-line{
+        font-size: 2em;
+        font-weight: bold;
+        color: blue;
+    }
+
+    h1::before{
+        content: "*";
+        color:red;
+        margin-right: 5px;
+    }
+    h1{
+        position: relative;
+    }
+    h1::after{
+        content:"";
+        position: absolute;
+        width: 10%;
+        height: 13%;
+        background-image: url(images/pumkin1.jpg);
+        background-size:cover;
+        background-position: center;
+        margin-left: 10px;
+    }
+    .heading_calc{
+        /* width : 100% */
+        width: calc(100%-80px);
+        margin: auto;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        text-shadow: 2px 2px 2px black;
+    }
+    .heading_min{
+        width: min(100%, 700px);
+        margin: 20px auto;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        text-shadow: 2px 2px 2px black;
+    }
+
+    .heading_max h1{
+        font-size: max(3vw, 2em);
+    }
+    .heading_clamp{
+        font-size: clamp(1rem, 2vw ,2rem);
+        /* 1rem = 16px (chrome기준) */
+    }
+    </STYLE>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS 가상 요소</h1>
+        <p id="p1">가상 요소를 사용하면 CSS로 시각적 변화를 줄 수 있습니다. 이는 성능을 저하시키지
+            않으면서 웹 페이지를 꾸밀수 있는 효율적인 방법입니다.</p>
+      <p id="p2">가상 요소를 사용하면 CSS로 시각적 변화를 줄 수 있습니다. 이는 성능을 저하시키지
+          않으면서 웹 페이지를 꾸밀수 있는 효율적인 방법입니다.</p>
+
+    <hr>
+
+    <div class="heading_calc">
+        <h1>CSS 함수</h1>
+    </div>
+    <div class="heading_min">
+        <h1>CSS 함수-min()</h1>
+    </div>
+    <div class="heading_max">
+        <h1>CSS 함수-max()</h1>
+    </div>
+    <div class="healing_clamp">
+        <h1>CSS - clamp</h1>
+    </div>
+
+        
+    </div>
+    
+</body>
+</html>
